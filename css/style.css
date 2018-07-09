@@ -107,10 +107,15 @@ input:focus {
 }
 
 .header .logo {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   margin: auto;
+}
+
+.header .logo .logo-small {
+  display: none;
+}
+
+.header .logo img {
+  max-width: 100%;
 }
 
 .header .contacts {
