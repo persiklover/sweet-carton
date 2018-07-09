@@ -55,7 +55,7 @@
               </p>
               <p class="form-text_important">Образцы упаковки бесплатно!</p>
               <form action="get">
-                  <input type="tel" placeholder="Введите номер телефона">
+                  <input type="tel" placeholder="+7 (___) ___-__-__" class="phone">
                   <button class="btn" type="submit">Оставить заявку!</button>
               </form>
               <small class="form-subtext">*Минимальный заказ 500шт</small>
@@ -312,7 +312,7 @@
             </div>
             <!-- /.main-text__subtitle -->
             <form>
-              <input type="tel" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
+              <input class="phone" type="tel" placeholder="+7 (___) ___-__-__">
               <button class="btn">Оставить заявку!</button>
             </form>
             <!-- /.form -->
@@ -385,44 +385,44 @@
     <div class="clients">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="col-6 col-md-6 col-lg-3">
             <div class="item"><img src="img/clients/logo-1.png" alt="" class="logo"></div>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="col-6 col-md-6 col-lg-3">
             <div class="item"><img src="img/clients/logo-2.png" alt="" class="logo"></div>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="col-6 col-md-6 col-lg-3">
             <div class="item"><img src="img/clients/logo-3.png" alt="" class="logo"></div>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="col-6 col-md-6 col-lg-3">
             <div class="item"><img src="img/clients/logo-4.png" alt="" class="logo"></div>
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="col-6 col-md-6 col-lg-3">
             <div class="item"><img src="img/clients/logo-5.png" alt="" class="logo"></div>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="col-6 col-md-6 col-lg-3">
             <div class="item"><img src="img/clients/logo-6.png" alt="" class="logo"></div>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="col-6 col-md-6 col-lg-3">
             <div class="item"><img src="img/clients/logo-7.png" alt="" class="logo"></div>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="col-6 col-md-6 col-lg-3">
             <div class="item"><img src="img/clients/logo-8.png" alt="" class="logo"></div>
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="col-6 col-md-6 col-lg-3">
             <div class="item"><img src="img/clients/logo-9.png" alt="" class="logo"></div>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="col-6 col-md-6 col-lg-3">
             <div class="item"><img src="img/clients/logo-10.png" alt="" class="logo"></div>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="col-6 col-md-6 col-lg-3">
             <div class="item"><img src="img/clients/logo-11.png" alt="" class="logo"></div>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="col-6 col-md-6 col-lg-3">
             <div class="item"><img src="img/clients/logo-12.png" alt="" class="logo"></div>
           </div>
         </div>
@@ -442,7 +442,6 @@
               <div class="slide"><img src="img/docs/doc1.png" alt=""></div>
               <div class="slide"><img src="img/docs/doc2.png" alt=""></div>
               <div class="slide"><img src="img/docs/doc3.png" alt=""></div>
-              <div class="slide"><img src="img/docs/doc3.png" alt=""></div>
             </div>
             <!-- /.reviews-slider -->
           </div>
@@ -458,7 +457,7 @@
 
   <section class="contact-us">
     <div class="map">
-      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A470338aedb7908446e53205dcc2cecf406e15273c42e099a2b2f257b252c1511&amp;source=constructor" width="100%" height="550" frameborder="0"></iframe>
+      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A470338aedb7908446e53205dcc2cecf406e15273c42e099a2b2f257b252c1511&amp;width=100%25&amp;height=550&amp;lang=ru_RU&amp;scroll=false"></script>
     </div>
     <!-- /.map -->
     <div class="container">
@@ -505,11 +504,15 @@
   <!-- /.footer -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  <script src="lib/jquery.maskedinput.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   <!-- slick.js -->
   <script src="lib/slick/slick.min.js"></script>
   <script>
-     $('.slider-preview').slick({
+    $('.phone').mask('+7 (999) 999-99-99');
+
+    $('.slider-preview').slick({
+      draggable: false,
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
@@ -517,23 +520,19 @@
       asNavFor: '.slider'
     });
     $('.slider').slick({
-      slidesToShow: 4,
-      slidesToScroll: 1,
       focusOnSelect: true,
       variableWidth: true,
       asNavFor: '.slider-preview',
-      centerMode: true,
+      nextArrow: '<div class="slick-arrow slick-prev"></div>',
+      prevArrow: '<div class="slick-arrow slick-next"></div>',
     });
 
     $('.reviews-slider').slick({
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
+      'slidesToShow': 1,
       focusOnSelect: true,
       variableWidth: true,
       centerMode: true,
-      // nextArrow: '<i class="slick-arrow slick-prev"><img src="img/arrow.svg" alt="" /></i>',
-      // prevArrow: '<i class="slick-arrow slick-next"><img src="img/arrow.svg" alt="" /></i>',
+      // centerPadding: '100px',
     });
   </script>
 </body>

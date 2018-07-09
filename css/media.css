@@ -1,20 +1,11 @@
 @media (max-width: 992px) {
-  .main .main-text {
-    color: #fff;
-  }
-
-  .main .main-text__title {
-    font-size: 3.5rem;
+  .production .main-text__title {
     text-align: center;
-  }
-
-  .main .main-text__subtitle {
-    font-size: 1.9rem;
-    text-align: center;
-  }
-
-  .main .main-text .form {
-    margin-top: 1.4rem;
+    margin-top: 2rem;
+    padding-left: 2rem;
+    -webkit-transform: translateX(0rem);
+    -ms-transform: translateX(0rem);
+    transform: translateX(0rem);
   }
 }
 
@@ -57,12 +48,47 @@
 }
 
 @media (max-width: 576px) {
-  .production .main-text__title {
+  .main .main-text__title {
+    font-size: 3.2rem;
+    line-height: 2.8rem;
     text-align: center;
-    margin-top: 2rem;
-    padding-left: 2rem;
-    -webkit-transform: translateX(0rem);
-    -ms-transform: translateX(0rem);
-    transform: translateX(0rem);
+  }
+
+  .main .main-text__subtitle {
+    font-size: 1.9rem;
+    text-align: center;
+  }
+
+  .main .main-text .form {
+    text-align: center;
+    margin-top: 1.4rem;
+    background: rgba(255,255,255,0);
+    padding: 2.5rem 0;
+  }
+
+  .main .main-text .form form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .main .main-text .form form input,
+  .main .main-text .form form button {
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .our-clients .clients .item {
+    padding: 1rem;
+  }
+
+  .our-clients .clients .item img {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
   }
 }
