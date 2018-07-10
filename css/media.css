@@ -63,6 +63,10 @@
 
 @media (max-width: 768px) {
   .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 4;
     margin: 0;
     padding: 0.5rem 0;
     border-bottom: 1px solid #000;
@@ -112,6 +116,10 @@
 
   .header .contacts .btn span {
     display: none;
+  }
+
+  .main {
+    margin-top: 5.5rem;
   }
 
   .production .slider-wrapper {
