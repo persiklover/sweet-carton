@@ -1,4 +1,8 @@
 @media (max-width: 992px) {
+  html {
+    font-size: 9px;
+  }
+
   .header .contacts .phones {
     display: -webkit-box;
     display: -webkit-flex;
@@ -20,17 +24,31 @@
     margin-right: 1.5rem;
   }
 
-  .header .contacts .phones .phone {
+  .header .contacts .phones .phone-1,
+  .header .contacts .phones .phone-2 {
     font-size: 2rem;
     margin: 0;
   }
 
-  .header .contacts .phones .phone:nth-child(2) {
+  .header .contacts .phones .phone-1:after,
+  .header .contacts .phones .phone-2:after {
+    display: none;
+  }
+
+  .header .contacts .phones .phone-2 {
     margin: 0;
   }
 
-  .header .contacts .phones .phone:after {
-    display: none;
+  .features .feature__title {
+    font-size: 3rem;
+  }
+
+  .features .feature__subtitle {
+    font-size: 1.6rem;
+  }
+
+  .features .feature-blocks .feature-block {
+    padding: 1rem;
   }
 
   .production .main-text__title {
@@ -44,71 +62,60 @@
 }
 
 @media (max-width: 768px) {
-  .header .contacts button {
-    padding: 0.5rem;
-  }
-
-  .header .contacts button img {
+  .header {
     margin: 0;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #000;
   }
 
-  .header .contacts button span {
-    display: none;
-  }
-}
-
-@media (max-width: 576px) {
-  .header .logo .logo-normal {
+  .header .logo > img {
     display: none;
   }
 
-  .header .logo .logo-small {
-    display: block;
+  .header .logo-mobile {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     width: 4rem;
     height: 4rem;
     background: #ff9d00;
     -webkit-border-radius: 0.4rem;
     border-radius: 0.4rem;
-    padding: 0.7rem;
+    padding: 0.5rem;
   }
 
-  .header .contacts .phones .phone {
-    font-size: 1.5rem;
+  .header .logo-mobile img {
+    margin: auto;
   }
 
-  .main .main-text__title {
-    font-size: 3.2rem;
-    line-height: 2.8rem;
-    text-align: center;
+  .header .contacts .phones .phone-1,
+  .header .contacts .phones .phone-2 {
+    font-size: 1.6rem;
   }
 
-  .main .main-text__subtitle {
-    font-size: 1.9rem;
-    text-align: center;
+  .header .contacts .btn {
+    padding: 0.5rem;
   }
 
-  .main .main-text .form {
-    text-align: center;
-    margin-top: 1.4rem;
-    background: rgba(255,255,255,0);
-    padding: 2.5rem 0;
+  .header .contacts .btn img {
+    margin: 0;
   }
 
-  .main .main-text .form form {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
+  .header .contacts .btn span {
+    display: none;
   }
 
-  .main .main-text .form form input,
-  .main .main-text .form form button {
-    margin: 0 auto;
-    margin-bottom: 1rem;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+  .production .slider-wrapper {
+    display: none;
   }
 
   .our-clients .clients .item {
@@ -118,5 +125,64 @@
   .our-clients .clients .item img {
     -webkit-filter: grayscale(0%);
     filter: grayscale(0%);
+  }
+
+  .reviews .reviews-slider {
+    max-width: 28rem;
+  }
+
+  .reviews .reviews-slider .slide {
+    margin: 0;
+  }
+
+  .contact-us .main-text {
+    margin: auto;
+    text-align: center;
+  }
+
+  .contact-us .main-text__section img {
+    display: none;
+  }
+
+  .contact-us .map {
+    position: static;
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .main .main-content .title {
+    font-size: 3.2rem;
+    line-height: 2.8rem;
+    text-align: center;
+  }
+
+  .main .main-content .subtitle {
+    font-size: 1.9rem;
+    text-align: center;
+  }
+
+  .main .main-content .form {
+    text-align: center;
+    margin-top: 3rem;
+    background: rgba(255,255,255,0);
+    padding: 0;
+  }
+
+  .main .main-content .form form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .main .main-content .form form input,
+  .main .main-content .form form button {
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }

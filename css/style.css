@@ -15,6 +15,11 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
 img {
   pointer-events: none;
   -webkit-user-select: none;
@@ -38,7 +43,7 @@ body {
   background: #ff9d00;
   color: #fff;
   font-size: 1.4rem;
-  padding: 1.2rem 1.7rem;
+  padding: 1.5rem 1.7rem;
   -webkit-border-radius: 0.4rem;
   border-radius: 0.4rem;
   -webkit-transition: 0.4s;
@@ -63,7 +68,7 @@ body {
 
 input {
   font-size: 1.4rem;
-  padding: 1.2rem 1.7rem;
+  padding: 1.5rem 1.7rem;
   -webkit-border-radius: 0.4rem;
   border-radius: 0.4rem;
   -webkit-transition: 0.4s;
@@ -107,12 +112,12 @@ input:focus {
   margin: auto;
 }
 
-.header .logo .logo-small {
-  display: none;
-}
-
 .header .logo img {
   max-width: 100%;
+}
+
+.header .logo-mobile {
+  display: none;
 }
 
 .header .contacts {
@@ -130,8 +135,8 @@ input:focus {
   align-items: center;
 }
 
-.header .contacts .phone {
-  margin-right: 1.5rem;
+.header .contacts .phone-1,
+.header .contacts .phone-2 {
   font-size: 2.2rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -141,17 +146,11 @@ input:focus {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-right: 1.5rem;
 }
 
-.header .contacts .phone:nth-child(2) {
-  margin-right: 2.5rem;
-}
-
-.header .contacts .phone:nth-child(2):after {
-  display: none;
-}
-
-.header .contacts .phone:after {
+.header .contacts .phone-1:after,
+.header .contacts .phone-2:after {
   content: '';
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -162,6 +161,14 @@ input:focus {
   opacity: 0.2;
   margin-left: 1.5rem;
   background: #000;
+}
+
+.header .contacts .phone-2 {
+  margin-right: 2.5rem;
+}
+
+.header .contacts .phone-2:after {
+  display: none;
 }
 
 .header .btn {
@@ -207,41 +214,42 @@ input:focus {
   background: rgba(0,0,0,0.6);
 }
 
-.main .main-text {
+.main .main-content {
   color: #fff;
 }
 
-.main .main-text__title {
+.main .main-content .title {
   color: #ff9d00;
   font-size: 4.1rem;
   font-weight: 700;
   line-height: 4.2rem;
 }
 
-.main .main-text__subtitle {
+.main .main-content .subtitle {
   font-size: 2.8rem;
   font-weight: 400;
 }
 
-.main .main-text .form {
+.main .main-content .form {
   margin-top: 2.4rem;
   background: rgba(255,255,255,0.2);
   padding: 2.5rem;
 }
 
-.main .main-text .form .form-text {
+.main .main-content .form .form-text {
   font-size: 2rem;
   font-weight: 300;
   line-height: 3rem;
   margin: 0;
 }
 
-.main .main-text .form .form-text_important {
-  font-weight: bold;
+.main .main-content .form .form-text_important {
+  font-size: 2rem;
   text-transform: uppercase;
+  line-height: 3rem;
 }
 
-.main .main-text .form form {
+.main .main-content .form form {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -249,13 +257,13 @@ input:focus {
   margin: 1.2rem 0;
 }
 
-.main .main-text .form form input {
+.main .main-content .form form input {
   text-align: center;
   margin-right: 1rem;
   width: 100%;
 }
 
-.main .main-text .form .form-subtext {
+.main .main-content .form .form-subtext {
   font-size: 1.4rem;
   font-weight: 300;
   line-height: 3rem;
@@ -582,10 +590,6 @@ input:focus {
   line-height: 2.4rem;
 }
 
-.slick-dots li button:before {
-  font-size: 4.6rem;
-}
-
 .our-clients {
   padding: 5rem 0;
   text-align: center;
@@ -597,6 +601,7 @@ input:focus {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin: 0 auto;
   margin-top: 3rem;
   max-width: 21.5rem;
   height: 13.3rem;
@@ -627,6 +632,10 @@ input:focus {
 
 .reviews .slider-wrapper {
   padding: 0 4rem;
+}
+
+.reviews .reviews-slider {
+  margin: 0 auto;
 }
 
 .reviews .reviews-slider .slick-arrow {
@@ -680,6 +689,7 @@ input:focus {
 }
 
 .reviews .reviews-slider .slide img {
+  max-width: 100%;
   margin: auto;
 }
 
@@ -689,11 +699,16 @@ input:focus {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 55rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 55rem;
 }
 
 .contact-us .map {
@@ -731,6 +746,10 @@ input:focus {
 
 .contact-us .main-text__section img {
   margin-right: 1.2rem;
+}
+
+.contact-us .main-text__section .side {
+  width: 100%;
 }
 
 .contact-us .main-text__section .side .title {
