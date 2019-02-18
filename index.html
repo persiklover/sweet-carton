@@ -1,351 +1,309 @@
 <!doctype html>
 <html lang="ru">
 <head>
+  <!-- Basics -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link rel="icon" href="/favicon.ico">
+  <!-- Mobile viewport -->
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- Meta Tags -->
   <meta name="theme-color" content="#ff9d00">
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
-
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <!-- Website Title -->
+  <title>Добрый картон</title>
+  <link rel="icon" href="/favicon.ico">
+  <!-- Include CSS -->
+  <link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="lib/slick/slick-theme.css">
   <link rel="stylesheet" href="lib/slick/slick.css">
-
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/media.css">
-
-  <title>Добрый картон</title>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <div class="header">
+  <header class="header">
     <div class="container">
       <div class="row align-items-center">
+
         <div class="col-3">
-          <div class="logo">
+          <a class="header__logo" href="#">
             <img src="img/logo.png" alt="">
-            <div class="logo-mobile">
-              <img src="img/logo-mobile.png" alt="">
-            </div>
-          </div>
+          </a>
+
+          <a class="header__logo--mobile" href="#">
+            <img class="hidden" src="img/logo-mobile.png" alt="">
+          </a>
         </div>
-        <!-- /.col-4 -->
+
         <div class="col-9">
-          <div class="contacts">
+          <div class="header__contacts">
             <div class="phones">
-              <span class="phone-1">
-                <a href="tel:8(347)271-54-28">8 (347) <b>271-54-28</b></a>
-              </span>
-              <span class="phone-2">
-                <a href="tel:8(937)363-30-00">8 (937) <b>363-30-00</b></a>
-              </span>
+              <a href="tel:8(347)271-54-28">8 (347) <b>271-54-28</b></a>
+              <a href="tel:8(937)363-30-00">8 (937) <b>363-30-00</b></a>
             </div>
-            <button class="btn">
+            <button class="btn call-btn">
               <img src="img/phone.png" alt="">
               <span>Заказать звонок</span>
             </button>
           </div>
         </div>
-        <!-- /.col-8 -->
+
+        </div>
+
       </div>
       <!-- /.row -->
     </div>
     <!-- /.container -->
-  </div>
-  <!-- /.header -->
+  </header>
 
   <section class="main">
     <div class="container">
       <div class="row justify-content-center">
+
         <div class="col-sm-12 col-md-10 col-lg-6">
-          <div class="main-content">
-            <h1 class="title">Производство упаковки из гофрокартона</h1>
-            <p class="subtitle">с доставкой по всей России</p>
-            <div class="form">
-              <p class="form-text">
-                Получите индивидуальное предложение на производство и поставку гофропродукции
-              </p>
-              <strong class="form-text_important">Образцы упаковки бесплатно!</strong>
-              <form action="get">
-                <input type="tel" placeholder="+7 (___) ___-__-__" class="phone">
-                <button class="btn" type="submit">Оставить заявку!</button>
-              </form>
-              <small class="form-subtext">*Минимальный заказ 500шт</small>
-            </div>
+
+          <h1 class="main__title">Производство упаковки из гофрокартона</h1>
+          <p class="main__subtitle">с доставкой по всей России</p>
+
+          <div class="form-wrap">
+            <p class="form-wrap__text">Получите индивидуальное предложение на производство и поставку гофропродукции</p>
+            <strong>Образцы упаковки бесплатно!</strong>
+
+            <form class="form" action="get">
+              <input class="phone-input" type="tel" placeholder="Введите номер телефона">
+              <button class="btn" type="submit">Оставить заявку!</button>
+            </form>
+
+            <small class="form-wrap__subtext">*Минимальный заказ 500шт</small>
           </div>
+
         </div>
-        <!-- /.col-12 -->
+
       </div>
       <!-- /.row -->
     </div>
     <!-- /.container -->
   </section>
 
-  <section class="features">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-4">
-          <div class="feature">
-            <div class="feature__title">5 лет</div>
-            <!-- /.feature__title -->
-            <div class="feature__subtitle">На рынке изделий из гофрокартона</div>
-            <!-- /.feature__subtitle -->
-          </div>
-          <!-- /.feature -->
-        </div>
-        <!-- /.col -->
-        <div class="col-12 col-md-4">
-          <div class="feature">
-            <div class="feature__title">до 5 000 000 м<sup>2</sup></div>
-            <!-- /.feature__title -->
-            <div class="feature__subtitle">Ежемесячный объем производства гофрокартона</div>
-            <!-- /.feature__subtitle -->
-          </div>
-          <!-- /.feature -->
-        </div>
-        <!-- /.col -->
-        <div class="col-12 col-md-4">
-          <div class="feature">
-            <div class="feature__title">4 000 м<sup>2</sup></div>
-            <!-- /.feature__title -->
-            <div class="feature__subtitle">Площадь склада</div>
-            <!-- /.feature__subtitle -->
-          </div>
-          <!-- /.feature -->
-        </div>
-        <!-- /.col -->
-      </div>
-      <!-- /.row -->
-    </div>
-    <!-- /.container -->
+  <section class="triggers">
 
-    <div class="feature-blocks">
+    <div class="advantages">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-4">
 
-            <div class="feature-block">
-              <div class="feature-block__img">
+          <div class="col-12 col-md-4">
+            <div class="advantage">
+              <h3 class="advantage__title">5 лет</h3>
+              <p class="advantage__subtitle">На рынке изделий из гофрокартона</p>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="advantage">
+              <h3 class="advantage__title">до 5 000 000 м<sup>2</sup></h3>
+              <p class="advantage__subtitle">Ежемесячный объем производства гофрокартона</p>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="advantage">
+              <h3 class="advantage__title">4 000 м<sup>2</sup></h3>
+              <p class="advantage__subtitle">Площадь склада</p>
+            </div>
+          </div>
+
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </div>
+
+    <div class="features">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-xs-12 col-md-6 col-lg-4">
+
+            <div class="feature">
+              <div class="feature__img">
                 <img src="img/features/1.png" alt="">
               </div>
-              <div class="feature-block-text">
-                <div class="feature-block__title">Производство</div>
-                <div class="feature-block__subtitle">4 технологические линии спо- собны выполнить любой заказ любой сложности</div>
+              <div class="feature-text">
+                <h3 class="feature-text__title">Производство</h3>
+                <p class="feature-text__subtitle">4 технологические линии способны выполнить любой заказ любой сложности</p>
               </div>
             </div>
 
           </div>
 
-          <div class="col-12 col-md-4">
+          <div class="col-xs-12 col-md-6 col-lg-4">
 
-            <div class="feature-block">
-              <div class="feature-block__img">
+            <div class="feature">
+              <div class="feature__img">
                 <img src="img/features/2.png" alt="">
               </div>
-              <div class="feature-block-text">
-                <div class="feature-block__title">Бесплатные образцы</div>
-                <div class="feature-block__subtitle">Бесплатно делаем образцы гофроупаковки - это помогает заранее увидеть упаковку</div>
+              <div class="feature-text">
+                <h3 class="feature-text__title">Бесплатные образцы</h3>
+                <p class="feature-text__subtitle">Бесплатно делаем образцы гофроупаковки - это помогает заранее увидеть упаковку</p>
               </div>
             </div>
 
           </div>
 
-          <div class="col-12 col-md-4">
+          <div class="col-xs-12 col-md-6 col-lg-4">
 
-            <div class="feature-block">
-              <div class="feature-block__img">
+            <div class="feature">
+              <div class="feature__img">
                 <img src="img/features/3.png" alt="">
               </div>
-              <div class="feature-block-text">
-                <div class="feature-block__title">Стабильное качество</div>
-                <div class="feature-block__subtitle">Собственная лаборатория контролирует качество на каждом этапе производства</div>
+              <div class="feature-text">
+                <h3 class="feature-text__title">Стабильное качество</h3>
+                <p class="feature-text__subtitle">Собственная лаборатория контролирует качество на каждом этапе производства</p>
               </div>
             </div>
 
           </div>
 
-          <div class="col-12 col-md-4">
+          <div class="col-xs-12 col-md-6 col-lg-4">
 
-            <div class="feature-block">
-              <div class="feature-block__img">
+            <div class="feature">
+              <div class="feature__img">
                 <img src="img/features/4.png" alt="">
               </div>
-              <div class="feature-block-text">
-                <div class="feature-block__title">Страховой запас</div>
-                <div class="feature-block__subtitle">Можем хранить запас гофро- продукции на своих складах и поставлять его партиями</div>
+              <div class="feature-text">
+                <h3 class="feature-text__title">Страховой запас</h3>
+                <p class="feature-text__subtitle">Можем хранить запас гофро- продукции на своих складах и поставлять его партиями</p>
               </div>
             </div>
 
           </div>
 
-          <div class="col-12 col-md-4">
+          <div class="col-xs-12 col-md-6 col-lg-4">
 
-            <div class="feature-block">
-              <div class="feature-block__img">
+            <div class="feature">
+              <div class="feature__img">
                 <img src="img/features/5.png" alt="">
               </div>
-              <div class="feature-block-text">
-                <div class="feature-block__title">Флексопечать</div>
-                <div class="feature-block__subtitle">Возможно нанесение вашего  логотипа, текста или мани- пуляционных знаков</div>
+              <div class="feature-text">
+                <h3 class="feature-text__title">Флексопечать</h3>
+                <p class="feature-text__subtitle">Возможно нанесение вашего логотипа, текста или мани- пуляционных знаков</p>
               </div>
             </div>
 
           </div>
 
-          <div class="col-12 col-md-4">
+          <div class="col-xs-12 col-md-6 col-lg-4">
 
-            <div class="feature-block">
-              <div class="feature-block__img">
+            <div class="feature">
+              <div class="feature__img">
                 <img src="img/features/6.png" alt="">
               </div>
-              <div class="feature-block-text">
-                <div class="feature-block__title">Гидрофобные добавки</div>
-                <div class="feature-block__subtitle">На производстве реализована технология, которая позволяет гофрокартону стать прочнее</div>
+              <div class="feature-text">
+                <h3 class="feature-text__title">Гидрофобные добавки</h3>
+                <p class="feature-text__subtitle">На производстве реализована технология, которая позволяет гофрокартону стать прочнее</p>
               </div>
             </div>
 
           </div>
+
         </div>
+        <!-- /.row -->
       </div>
+      <!-- /.container -->
     </div>
+    <!-- /.features -->
   </section>
-  <!-- /.features -->
 
   <section class="products">
-    <div class="container">
-      <h2 class="section-title">Наша продукция</h2>
-      <!-- /.section-title -->
-      <div class="products-list">
-        <div class="row">
-          <div class="col-sm-12 col-md-6">
-            <div class="item">
-              <div class="item__img">
-                <img src="img/product-4.png" alt="">
-              </div>
-              <!-- /.item__img -->
-              <div class="item__title">
-                Гофрокороб 4-х клапанный
-              </div>
-              <!-- /.item__title -->
-              <div class="item__buttons">
-                <button class="btn btn-o">Подробнее</button>
-                <button class="btn">Получить расчет</button>
-              </div>
-              <!-- /.item__buttons -->
-            </div>
-            <!-- /.item -->
-          </div>
-          <!-- /.col-sm-12 col-md-6 -->
-          <div class="col-sm-12 col-md-6">
-            <div class="item">
-              <div class="item__img">
-                <img src="img/product-3.png" alt="">
-              </div>
-              <!-- /.item__img -->
-              <div class="item__title">
-                Гофролоток
-              </div>
-              <!-- /.item__title -->
-              <div class="item__buttons">
-                <button class="btn btn-o">Подробнее</button>
-                <button class="btn">Получить расчет</button>
-              </div>
-              <!-- /.item__buttons -->
-            </div>
-            <!-- /.item -->
-          </div>
-          <!-- /.col-sm-12 col-md-6 -->
-        </div>
-        <!-- /.row -->
-        <div class="row">
-          <div class="col-sm-12 col-md-6">
-            <div class="item">
-              <div class="item__img">
-                <img src="img/product-2.png" alt="">
-              </div>
-              <!-- /.item__img -->
-              <div class="item__title">
-                Гофрокороб самосборный (сложная высечка)
-              </div>
-              <!-- /.item__title -->
-              <div class="item__buttons">
-                <button class="btn btn-o">Подробнее</button>
-                <button class="btn">Получить расчет</button>
-              </div>
-              <!-- /.item__buttons -->
-            </div>
-            <!-- /.item -->
-          </div>
-          <!-- /.col-sm-12 col-md-6 -->
-          <div class="col-sm-12 col-md-6">
-            <div class="item">
-              <div class="item__img">
-                <img src="img/product-1.png" alt="">
-              </div>
-              <!-- /.item__img -->
-              <div class="item__title">
-                Листовой гофрокартон
-              </div>
-              <!-- /.item__title -->
-              <div class="item__buttons">
-                <button class="btn btn-o">Подробнее</button>
-                <button class="btn">Получить расчет</button>
-              </div>
-              <!-- /.item__buttons -->
-            </div>
-            <!-- /.item -->
-          </div>
-          <!-- /.col-sm-12 col-md-6 -->
-        </div>
-        <!-- /.row -->
-      </div>
-      <!-- /.products-list -->
-    </div>
-    <!-- /.container -->
-  </section>
-  <!-- /.products -->
+    <h2>Наша продукция</h2>
 
-  <section class="personal-offering">
     <div class="container">
       <div class="row">
-        <div class="col-12">
-          <div class="main-text">
-            <div class="main-text__title">
-              Получите индивидуальное предложение
-            </div>
-            <!-- /.main-text__title -->
-            <div class="main-text__subtitle">
-              на производство и поставку изделий
-            </div>
-            <!-- /.main-text__subtitle -->
 
-            <div class="form-title">
-              Введите ваш номер телефона:
-            </div>
-            <!-- /.main-text__subtitle -->
-            <form>
-              <input class="phone" type="tel" placeholder="+7 (___) ___-__-__">
-              <button class="btn">Оставить заявку!</button>
-            </form>
-            <!-- /.form -->
-            <small class="form-subtext">*Минимальный заказ 500шт</small>
+        <div class="col-sm-12 col-md-6">
+          <div class="product">
+            <img src="img/products/4.png" alt="">
+            <h3 class="product__title">Гофрокороб 4-х клапанный</h3>
+            <footer class="product__footer">
+              <button class="btn btn--o">Подробнее</button>
+              <button class="btn">Получить расчет</button>
+            </footer>
           </div>
-          <!-- /.main-text -->
         </div>
-        <!-- /.col-12 -->
+
+        <div class="col-sm-12 col-md-6">
+          <div class="product">
+            <img src="img/products/3.png" alt="">
+            <h3 class="product__title">Гофролоток</h3>
+            <footer class="product__footer">
+              <button class="btn btn--o">Подробнее</button>
+              <button class="btn">Получить расчет</button>
+            </footer>
+          </div>
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+      <div class="row">
+
+        <div class="col-sm-12 col-md-6">
+          <div class="product">
+            <img src="img/products/2.png" alt="">
+            <h3 class="product__title">Гофрокороб самосборный (сложная высечка)</h3>
+            <footer class="product__footer">
+              <button class="btn btn--o">Подробнее</button>
+              <button class="btn">Получить расчет</button>
+            </footer>
+          </div>
+        </div>
+        
+        <div class="col-sm-12 col-md-6">
+          <div class="product">
+            <img src="img/products/1.png" alt="">
+            <h3 class="product__title">Листовой гофрокартон</h3>
+            <footer class="product__footer">
+              <button class="btn btn--o">Подробнее</button>
+              <button class="btn">Получить расчет</button>
+            </footer>
+          </div>
+        </div>
+
       </div>
       <!-- /.row -->
     </div>
     <!-- /.container -->
   </section>
-  <!-- /.personal-offering -->
+
+  <section class="offering">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-12">
+          <div class="offering-text">
+            <h3 class="offering-text__title">Получите индивидуальное предложение</h3>
+            <p class="offering-text__subtitle">на производство и поставку изделий</p>
+
+            <form class="form" action="get">
+              <p class="form-title">Введите ваш номер телефона:</p>
+              <input class="phone-input" type="tel" placeholder="Введите номер телефона">
+              <button class="btn" type="submit">Оставить заявку!</button>
+            </form>
+
+            <small class="offering-text__small">*Минимальный заказ 500шт</small>
+          </div>
+        </div>
+
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  </section>
 
   <section class="production">
     <div class="container">
       <div class="row">
+
         <div class="col-sm-12 col-lg-7">
           <div class="slider-preview">
             <div class="item"><img src="img/slider/1.jpg" alt=""></div>
@@ -364,15 +322,13 @@
             </div>
           </div>
         </div>
-        <!-- /.col-7 -->
+
         <div class="col-sm-12 col-lg-5">
-          <div class="main-text">
-            <div class="main-text__title">
-              Производство
-            </div>
-            <p>
-              Современное оборудование позволяет произ- водить до 5 миллионов квадратных метров гофрокартона ежемесячно. Гофрокороба и лотки производятся по ГОСТу или чертежам заказчика.<br><br>Досконально прорабатываем конструкции коро- бов и составы сырья, учитывая условия хранения, транспортировки и производства вашей продукции.<br><br>Возможно нанесение цветной флексопечати на поверхность коробов.
-            </p>
+          <div class="production-text">
+            <h3 class="production-text__title">Производство</h3>
+            <p>Современное оборудование позволяет производить до 5 миллионов квадратных метров гофрокартона ежемесячно. Гофрокороба и лотки производятся по ГОСТу или чертежам заказчика.</p>
+            <p>Досконально прорабатываем конструкции коробов и составы сырья, учитывая условия хранения, транспортировки и производства вашей продукции.</p>
+            <p>Возможно нанесение цветной флексопечати на поверхность коробов.</p>
           </div>
         </div>
         <!-- /.col-5 -->
@@ -382,182 +338,164 @@
     <!-- /.container -->
   </section>
 
-  <section class="our-clients">
-    <div class="section-title">
-      Наши клиенты
-    </div>
-    <!-- /.section-header -->
-    <div class="clients">
+  <section class="clients">
+    <h2>Наши клиенты</h2>
+
       <div class="container">
         <div class="row">
+
           <div class="col-6 col-md-6 col-lg-3">
-            <div class="item"><img src="img/clients/logo-1.png" alt="" class="logo"></div>
+            <div class="client">
+              <img src="img/clients/logo-1.png" alt="">
+            </div>
           </div>
+
           <div class="col-6 col-md-6 col-lg-3">
-            <div class="item"><img src="img/clients/logo-2.png" alt="" class="logo"></div>
+            <div class="client">
+              <img src="img/clients/logo-2.png" alt="">
+            </div>
           </div>
+
           <div class="col-6 col-md-6 col-lg-3">
-            <div class="item"><img src="img/clients/logo-3.png" alt="" class="logo"></div>
+            <div class="client">
+              <img src="img/clients/logo-3.png" alt="">
+            </div>
           </div>
+
           <div class="col-6 col-md-6 col-lg-3">
-            <div class="item"><img src="img/clients/logo-4.png" alt="" class="logo"></div>
+            <div class="client">
+              <img src="img/clients/logo-4.png" alt="">
+            </div>
           </div>
+
         </div>
         <div class="row">
+
           <div class="col-6 col-md-6 col-lg-3">
-            <div class="item"><img src="img/clients/logo-5.png" alt="" class="logo"></div>
+            <div class="client">
+              <img src="img/clients/logo-5.png" alt="">
+            </div>
           </div>
+
           <div class="col-6 col-md-6 col-lg-3">
-            <div class="item"><img src="img/clients/logo-6.png" alt="" class="logo"></div>
+            <div class="client">
+              <img src="img/clients/logo-6.png" alt="">
+            </div>
           </div>
+          
           <div class="col-6 col-md-6 col-lg-3">
-            <div class="item"><img src="img/clients/logo-7.png" alt="" class="logo"></div>
+            <div class="client">
+              <img src="img/clients/logo-7.png" alt="">
+            </div>
           </div>
+
           <div class="col-6 col-md-6 col-lg-3">
-            <div class="item"><img src="img/clients/logo-8.png" alt="" class="logo"></div>
+            <div class="client">
+              <img src="img/clients/logo-8.png" alt="">
+            </div>
           </div>
+
         </div>
         <div class="row">
+          
           <div class="col-6 col-md-6 col-lg-3">
-            <div class="item"><img src="img/clients/logo-9.png" alt="" class="logo"></div>
+            <div class="client">
+              <img src="img/clients/logo-9.png" alt="">
+            </div>
           </div>
+
           <div class="col-6 col-md-6 col-lg-3">
-            <div class="item"><img src="img/clients/logo-10.png" alt="" class="logo"></div>
+            <div class="client">
+              <img src="img/clients/logo-10.png" alt="">
+            </div>
           </div>
+
           <div class="col-6 col-md-6 col-lg-3">
-            <div class="item"><img src="img/clients/logo-11.png" alt="" class="logo"></div>
+            <div class="client">
+              <img src="img/clients/logo-11.png" alt="">
+            </div>
           </div>
+
           <div class="col-6 col-md-6 col-lg-3">
-            <div class="item"><img src="img/clients/logo-12.png" alt="" class="logo"></div>
+            <div class="client">
+              <img src="img/clients/logo-12.png" alt="">
+            </div>
           </div>
+
         </div>
       </div>
-    </div>
   </section>
-  <!-- /.our-clients -->
 
   <section class="reviews">
-    <div class="section-title">Отзывы о сотрудничестве</div>
-    <!-- /.section-title -->
+    <h2>Отзывы о сотрудничестве</h2>
+
     <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="slider-wrapper">
-            <div class="reviews-slider">
-              <div class="slide"><img src="img/docs/doc1.png" alt=""></div>
-              <div class="slide"><img src="img/docs/doc2.png" alt=""></div>
-              <div class="slide"><img src="img/docs/doc3.png" alt=""></div>
-              <div class="slide"><img src="img/docs/doc3.png" alt=""></div>
-            </div>
-            <!-- /.reviews-slider -->
-          </div>
-          <!-- /.slider-wrapper -->
+
+      <div class="reviews-wrapper">
+        <div class="reviews-slider">
+          <div class="slide"><img src="img/docs/doc1.png" alt=""></div>
+          <div class="slide"><img src="img/docs/doc2.png" alt=""></div>
+          <div class="slide"><img src="img/docs/doc3.png" alt=""></div>
+          <div class="slide"><img src="img/docs/doc3.png" alt=""></div>
         </div>
-        <!-- /.col-12 -->
       </div>
-      <!-- /.row -->
+
     </div>
     <!-- /.container -->
   </section>
-  <!-- /.reviews -->
 
-  <section class="contact-us">
+  <section class="contacts">
     <div class="container">
-      <div class="main-text">
-        <div class="main-text__section">
+
+      <div class="contacts-block">
+        <section>
           <img src="img/icons/icon1.png" alt="">
-          <div class="side">
-            <div class="part">
-              <div class="title">Адрес офиса</div>
-              <div class="subtitle">г. Уфа, Проспект октября, 46</div>
+          <aside class="aside">
+            <div class="aside-row">
+              <p class="aside-row__title">Адрес офиса</p>
+              <address>г. Уфа, Проспект октября, 46</address>
             </div>
-      
-            <div class="part">
-              <div class="title">Адрес склада</div>
-              <div class="subtitle">г. Уфа, ул. Майкопская, 65/2</div>
+            
+            <div class="aside-row">
+              <p class="aside-row__title">Адрес склада</p>
+              <address>г. Уфа, ул. Майкопская, 65/2</address>
             </div>
-          </div>
-        </div>
-        <div class="main-text__section">
+          </aside>
+        </section>
+
+        <section>
           <img src="img/icons/icon2.png" alt="">
-          <div class="side">
-            <div class="title">Тел. отдела продаж:</div>
-            <div class="subtitle">8 (347) 271-54-28</div>
-            <div class="subtitle">8 (937) 363-30-00</div>
-            <button class="btn">Заказать звонок</button>
-          </div>
-        </div>
-        <div class="main-text__section">
+          <aside class="aside">
+            <div class="aside-row">
+              <p class="aside-row__title">Тел. отдела продаж:</p>
+              <a href="tel:">8 (347) 271-54-28</a>
+              <a href="tel:">8 (937) 363-30-00</a>
+              <button class="btn">Заказать звонок</button>
+            </div>
+        </section>
+
+        <section>
           <img src="img/icons/icon3.png" alt="">
-          <div class="side">
-            <div class="title">Е-mail</div>
-            <div class="subtitle">urals.karton@gmail.com</div>
-          </div>
-        </div>
+          <aside class="aside">
+            <div class="aside-row">
+              <p class="aside-row__title">Е-mail</p>
+              <a href="mailto:">urals.karton@gmail.com</a>
+            </div>
+        </section>
       </div>
+
     </div>
-    <!-- /.main-text -->
+
     <div class="map">
       <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A470338aedb7908446e53205dcc2cecf406e15273c42e099a2b2f257b252c1511&amp;width=100%25&amp;height=550&amp;lang=ru_RU&amp;scroll=false"></script>
     </div>
-    <!-- /.map -->
   </section>
-  <!-- /.contact-us -->
 
-  <div class="footer">
-    © www.gofra-ural.ru 2016, все права защищены
-  </div>
-  <!-- /.footer -->
+  <footer class="footer">© www.gofra-ural.ru 2016, все права защищены</footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
   <script src="lib/jquery.maskedinput.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-  <!-- slick.js -->
   <script src="lib/slick/slick.min.js"></script>
-  <script>
-    $('.phone').mask('+7 (999) 999-99-99');
-
-    $('.slider-preview').slick({
-      draggable: false,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      fade: true,
-      asNavFor: '.slider',
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            draggable: true,
-            fade: false,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-          }
-        }
-      ]
-    });
-    $('.slider').slick({
-      focusOnSelect: true,
-      variableWidth: true,
-      asNavFor: '.slider-preview',
-      nextArrow: '<div class="slick-arrow slick-prev"></div>',
-      prevArrow: '<div class="slick-arrow slick-next"></div>',
-    });
-
-    $('.reviews-slider').slick({
-      slidesToShow: 3,
-      focusOnSelect: true,
-      variableWidth: true,
-      centerMode: true,
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1,
-          }
-        }
-      ]
-    });
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
