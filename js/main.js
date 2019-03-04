@@ -1,4 +1,6 @@
-$('.phone-input').mask('+7 (999) 999-99-99');
+new WOW().init();
+
+$('.js-phone-input').mask('+7 (999) 999-99-99');
 
 $('.slider-preview').slick({
   draggable: false,
