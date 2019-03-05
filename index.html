@@ -18,8 +18,9 @@
   <link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="lib/slick/slick-theme.css">
   <link rel="stylesheet" href="lib/slick/slick.css">
-  <link rel="stylesheet" href="lib/animate/animate.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="lib/animate/animate.css">
+  <link rel="stylesheet" href="lib/magnific-popup/magnific-popup.css">
 </head>
 <body>
   <header class="header">
@@ -39,8 +40,8 @@
         <div class="col-9">
           <div class="header-contacts">
             <div class="header-contacts__phones">
-              <a href="tel:8(347)271-54-28">8 (347) <b>271-54-28</b></a>
-              <a href="tel:8(937)363-30-00">8 (937) <b>363-30-00</b></a>
+              <a href="tel:83472715428">8 (347) <b>271-54-28</b></a>
+              <a href="tel:89373633000">8 (937) <b>363-30-00</b></a>
             </div>
             <button class="btn header-contacts__btn js-call-btn">
               <img src="img/phone.svg" alt="Телефон">
@@ -81,9 +82,9 @@
                 <p class="form-wrap__text">Получите индивидуальное предложение на производство и поставку гофропродукции</p>
                 <p class="form-wrap__text form-wrap__text--important">Образцы упаковки бесплатно!</p>
 
-                <form class="form" action="POST">
-                  <input class="js-phone-input" type="tel" placeholder="Введите номер телефона">
-                  <button class="btn" type="submit">Оставить заявку!</button>
+                <form class="form" method="POST">
+                  <input class="js-phone-input" type="tel" placeholder="Введите номер телефона" required>
+                  <button class="btn js-btn-send" type="submit">Оставить заявку!</button>
                 </form>
 
                 <p class="form-wrap__subtext">*Минимальный заказ 500шт</p>
@@ -222,23 +223,23 @@
 
           <div class="col-sm-12 col-md-6">
             <div class="product">
-              <img src="img/products/4.png" alt="">
-              <h3 class="product__title">Гофрокороб 4-х клапанный</h3>
-              <footer class="product__footer">
+              <img src="img/products/4.jpg" alt="Гофрокороб 4-х клапанный">
+              <h3 class="product__name">Гофрокороб 4-х клапанный</h3>
+              <div class="product__footer">
                 <button class="btn btn--o">Подробнее</button>
-                <button class="btn">Получить расчет</button>
-              </footer>
+                <button class="btn js-btn-">Получить расчет</button>
+              </div>
             </div>
           </div>
 
           <div class="col-sm-12 col-md-6">
             <div class="product">
-              <img src="img/products/3.png" alt="">
-              <h3 class="product__title">Гофролоток</h3>
-              <footer class="product__footer">
+              <img src="img/products/3.jpg" alt="Гофролоток">
+              <h3 class="product__name">Гофролоток</h3>
+              <div class="product__footer">
                 <button class="btn btn--o">Подробнее</button>
-                <button class="btn">Получить расчет</button>
-              </footer>
+                <button class="btn js-btn-">Получить расчет</button>
+              </div>
             </div>
           </div>
 
@@ -249,23 +250,23 @@
 
           <div class="col-sm-12 col-md-6">
             <div class="product">
-              <img src="img/products/2.png" alt="">
-              <h3 class="product__title">Гофрокороб самосборный (сложная высечка)</h3>
-              <footer class="product__footer">
+              <img src="img/products/2.jpg" alt="Гофрокороб самосборный (сложная высечка)">
+              <h3 class="product__name">Гофрокороб самосборный (сложная высечка)</h3>
+              <div class="product__footer">
                 <button class="btn btn--o">Подробнее</button>
-                <button class="btn">Получить расчет</button>
-              </footer>
+                <button class="btn js-btn-">Получить расчет</button>
+              </div>
             </div>
           </div>
           
           <div class="col-sm-12 col-md-6">
             <div class="product">
-              <img src="img/products/1.png" alt="">
-              <h3 class="product__title">Листовой гофрокартон</h3>
-              <footer class="product__footer">
+              <img src="img/products/1.jpg" alt="Листовой гофрокартон">
+              <h3 class="product__name">Листовой гофрокартон</h3>
+              <div class="product__footer">
                 <button class="btn btn--o">Подробнее</button>
-                <button class="btn">Получить расчет</button>
-              </footer>
+                <button class="btn js-btn-">Получить расчет</button>
+              </div>
             </div>
           </div>
 
@@ -284,13 +285,16 @@
               <h3 class="offering-text__title">Получите индивидуальное предложение</h3>
               <p class="offering-text__subtitle">на производство и поставку изделий</p>
 
-              <form class="form" action="get">
-                <p class="form-title">Введите ваш номер телефона:</p>
-                <input class="js-phone-input" type="tel" placeholder="Введите номер телефона">
-                <button class="btn" type="submit">Оставить заявку!</button>
-              </form>
+              <div class="form-wrap form-wrap--transparent">
+                <p class="form-wrap__text">Введите номер телефона</p>
 
-              <small class="offering-text__small">*Минимальный заказ 500шт</small>
+                <form class="form" method="POST">
+                  <input class="js-phone-input" type="tel" placeholder="Введите номер телефона" required>
+                  <button class="btn js-btn-send" type="submit">Оставить заявку!</button>
+                </form>
+
+                <p class="form-wrap__subtext">*Минимальный заказ 500шт</p>
+              </div>
             </div>
           </div>
 
@@ -341,102 +345,109 @@
     <section class="clients">
       <h2>Наши клиенты</h2>
 
-        <div class="container">
-          <div class="row">
+      <div class="container">
+        <div class="row">
 
-            <div class="col-6 col-md-6 col-lg-3">
-              <div class="client">
-                <img src="img/clients/logo-1.png" alt="">
-              </div>
+          <div class="col-6 col-md-6 col-lg-3">
+            <div class="client wow fadeInDown">
+              <img src="img/clients/logo-1.png" alt="">
             </div>
-
-            <div class="col-6 col-md-6 col-lg-3">
-              <div class="client">
-                <img src="img/clients/logo-2.png" alt="">
-              </div>
-            </div>
-
-            <div class="col-6 col-md-6 col-lg-3">
-              <div class="client">
-                <img src="img/clients/logo-3.png" alt="">
-              </div>
-            </div>
-
-            <div class="col-6 col-md-6 col-lg-3">
-              <div class="client">
-                <img src="img/clients/logo-4.png" alt="">
-              </div>
-            </div>
-
           </div>
-          <div class="row">
 
-            <div class="col-6 col-md-6 col-lg-3">
-              <div class="client">
-                <img src="img/clients/logo-5.png" alt="">
-              </div>
+          <div class="col-6 col-md-6 col-lg-3">
+            <div class="client wow fadeInDown">
+              <img src="img/clients/logo-2.png" alt="">
             </div>
-
-            <div class="col-6 col-md-6 col-lg-3">
-              <div class="client">
-                <img src="img/clients/logo-6.png" alt="">
-              </div>
-            </div>
-            
-            <div class="col-6 col-md-6 col-lg-3">
-              <div class="client">
-                <img src="img/clients/logo-7.png" alt="">
-              </div>
-            </div>
-
-            <div class="col-6 col-md-6 col-lg-3">
-              <div class="client">
-                <img src="img/clients/logo-8.png" alt="">
-              </div>
-            </div>
-
           </div>
-          <div class="row">
-            
-            <div class="col-6 col-md-6 col-lg-3">
-              <div class="client">
-                <img src="img/clients/logo-9.png" alt="">
-              </div>
-            </div>
 
-            <div class="col-6 col-md-6 col-lg-3">
-              <div class="client">
-                <img src="img/clients/logo-10.png" alt="">
-              </div>
+          <div class="col-6 col-md-6 col-lg-3">
+            <div class="client wow fadeInDown">
+              <img src="img/clients/logo-3.png" alt="">
             </div>
-
-            <div class="col-6 col-md-6 col-lg-3">
-              <div class="client">
-                <img src="img/clients/logo-11.png" alt="">
-              </div>
-            </div>
-
-            <div class="col-6 col-md-6 col-lg-3">
-              <div class="client">
-                <img src="img/clients/logo-12.png" alt="">
-              </div>
-            </div>
-
           </div>
+
+          <div class="col-6 col-md-6 col-lg-3">
+            <div class="client wow fadeInDown">
+              <img src="img/clients/logo-4.png" alt="">
+            </div>
+          </div>
+
         </div>
+        <div class="row">
+
+          <div class="col-6 col-md-6 col-lg-3">
+            <div class="client wow fadeInDown">
+              <img src="img/clients/logo-5.png" alt="">
+            </div>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3">
+            <div class="client wow fadeInDown">
+              <img src="img/clients/logo-6.png" alt="">
+            </div>
+          </div>
+          
+          <div class="col-6 col-md-6 col-lg-3">
+            <div class="client wow fadeInDown">
+              <img src="img/clients/logo-7.png" alt="">
+            </div>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3">
+            <div class="client wow fadeInDown">
+              <img src="img/clients/logo-8.png" alt="">
+            </div>
+          </div>
+
+        </div>
+        <div class="row">
+          
+          <div class="col-6 col-md-6 col-lg-3">
+            <div class="client wow fadeInDown">
+              <img src="img/clients/logo-9.png" alt="">
+            </div>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3">
+            <div class="client wow fadeInDown">
+              <img src="img/clients/logo-10.png" alt="">
+            </div>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3">
+            <div class="client wow fadeInDown">
+              <img src="img/clients/logo-11.png" alt="">
+            </div>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3">
+            <div class="client wow fadeInDown">
+              <img src="img/clients/logo-12.png" alt="">
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
 
     <section class="reviews">
       <h2>Отзывы о сотрудничестве</h2>
-
       <div class="container">
 
         <div class="reviews-wrapper">
           <div class="reviews-slider">
-            <div class="slide"><img src="img/docs/doc1.png" alt=""></div>
-            <div class="slide"><img src="img/docs/doc2.png" alt=""></div>
-            <div class="slide"><img src="img/docs/doc3.png" alt=""></div>
-            <div class="slide"><img src="img/docs/doc3.png" alt=""></div>
+            <a href="img/docs/1.jpg" class="reviews-slider__slide">
+              <img src="img/docs/1.jpg" alt="">
+            </a>
+            <a href="img/docs/2.jpg" class="reviews-slider__slide">
+              <img src="img/docs/2.jpg" alt="">
+            </a>
+            <a href="img/docs/3.jpg" class="reviews-slider__slide">
+              <img src="img/docs/3.jpg" alt="">
+            </a>
+            <a href="img/docs/4.jpg" class="reviews-slider__slide">
+              <img src="img/docs/4.jpg" alt="">
+            </a>
           </div>
         </div>
 
@@ -447,40 +458,42 @@
     <section class="contacts">
       <div class="container">
 
-        <div class="contacts-block">
-          <section>
-            <img src="img/icons/icon1.png" alt="">
-            <aside class="aside">
-              <div class="aside-row">
-                <p class="aside-row__title">Адрес офиса</p>
+        <div class="contacts-body">
+          <section class="contacts-block">
+            <img src="img/icons/1.svg" alt="Адрес">
+            <div class="contacts-block__info">
+              <div class="contacts-block__row">
+                <h4 class="contacts-block__title">Адрес офиса</h4>
                 <address>г. Уфа, Проспект октября, 46</address>
               </div>
               
-              <div class="aside-row">
-                <p class="aside-row__title">Адрес склада</p>
+              <div class="contacts-block__row">
+                <h4 class="contacts-block__title">Адрес склада</h4>
                 <address>г. Уфа, ул. Майкопская, 65/2</address>
               </div>
-            </aside>
+            </div>
           </section>
 
-          <section>
-            <img src="img/icons/icon2.png" alt="">
-            <aside class="aside">
-              <div class="aside-row">
-                <p class="aside-row__title">Тел. отдела продаж:</p>
-                <a href="tel:">8 (347) 271-54-28</a>
-                <a href="tel:">8 (937) 363-30-00</a>
+          <section class="contacts-block">
+            <img src="img/icons/2.svg" alt="Телефон">
+            <div class="contacts-block__info">
+              <div class="contacts-block__row">
+                <h4 class="contacts-block__title">Тел. отдела продаж:</h4>
+                <a href="tel:83472715428">8 (347) 271-54-28</a>
+                <a href="tel:89373633000">8 (937) 363-30-00</a>
                 <button class="btn">Заказать звонок</button>
               </div>
+            </div>
           </section>
 
-          <section>
-            <img src="img/icons/icon3.png" alt="">
-            <aside class="aside">
-              <div class="aside-row">
-                <p class="aside-row__title">Е-mail</p>
-                <a href="mailto:">urals.karton@gmail.com</a>
+          <section class="contacts-block">
+            <img src="img/icons/3.svg" alt="Письмо">
+            <div class="contacts-block__info">
+              <div class="contacts-block__row">
+                <h4 class="contacts-block__title">Е-mail</h4>
+                <a href="mailto:urals.karton@gmail.com">urals.karton@gmail.com</a>
               </div>
+            </div>
           </section>
         </div>
 
@@ -493,13 +506,16 @@
   </main>
 
   <footer class="footer">
-    © www.gofra-ural.ru 2016, все права защищены
+    <div class="container">
+      © www.gofra-ural.ru 2016, все права защищены
+    </div>
   </footer>
 
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/jquery/jquery.maskedinput.min.js"></script>
   <script src="lib/slick/slick.min.js"></script>
   <script src="lib/wowjs/wow.min.js"></script>
+  <script src="lib/magnific-popup/jquery.magnific-popup.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

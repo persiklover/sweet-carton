@@ -1,5 +1,15 @@
 new WOW().init();
 
+$(document).ready(function() {
+
+$('.js-btn-send').click(function() {
+  var $input = $(this).siblings('input');
+  if ($input.val() == "") {
+    console.log('!');
+    $input.addClass('error');
+  }
+});
+
 $('.js-phone-input').mask('+7 (999) 999-99-99');
 
 $('.slider-preview').slick({
@@ -21,6 +31,7 @@ $('.slider-preview').slick({
     }
   ]
 });
+
 $('.slider').slick({
   focusOnSelect: true,
   variableWidth: true,
@@ -33,13 +44,19 @@ $('.reviews-slider').slick({
   slidesToShow: 3,
   focusOnSelect: true,
   variableWidth: true,
-  centerMode: true,
-  // responsive: [
-  //   {
-  //     breakpoint: 768,
-  //     settings: {
-  //       slidesToShow: 1,
-  //     }
-  //   }
-  // ]
+  centerMode: true
+});
+
+$('.reviews-wrapper').magnificPopup({
+  delegate: 'a',
+  type: 'image',
+  tLoading: 'Loading image #%curr%...',
+  mainClass: 'mfp-img-mobile',
+  gallery: {
+    enabled: true,
+    navigateByImgClick: true,
+    preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+  }
+});
+
 });
