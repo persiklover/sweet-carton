@@ -2,11 +2,11 @@ new WOW().init();
 
 $(document).ready(function() {
 
-$('.js-btn-send').click(function() {
-  var $input = $(this).siblings('input');
-  if ($input.val() == "") {
-    console.log('!');
+$('.form').submit(function(e) {
+  var $input = $(this).children('input');
+  if ($input.val() == '') {
     $input.addClass('error');
+    e.preventDefault();
   }
 });
 
