@@ -758,8 +758,8 @@ input {
 .modal-close {
   position: absolute;
   z-index: 9999;
-  right: -2rem;
-  top: -2rem;
+  right: -1.75rem;
+  top: -1.75rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1609,7 +1609,6 @@ body.scroll-disabled {
     width: 100%;
     margin: 0;
     padding: .6rem 0;
-    border-bottom: 1px solid black;
   }
 
   .logo {
@@ -1761,5 +1760,18 @@ body.scroll-disabled {
   .container {
     padding: 0 7.5px;
     width: 100%;
+  }
+
+  .production-preview__item img {
+    height: 26rem;
+  }
+
+  .production-text p {
+    text-align: center;
+  }
+
+  .contacts-body {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
