@@ -1,0 +1,103 @@
+.home-screen
+  position: relative
+  display: flex
+  align-items: center
+  min-height: 53.3rem
+  background: rgba(black, 0.8)
+  color: white
+  // <768px
+  +sm
+    margin-top: 5.5rem
+  &__bg
+    display: flex
+    overflow: hidden
+    position: absolute
+    z-index: 0
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    img
+      height: 100vh
+      object-fit: cover
+  &__pic
+    visibility: hidden
+    margin-top: 3rem
+    // < 1200px
+    +lg
+      right: 2.5rem
+      img
+        width: 45rem
+    // < 992px
+    +md
+      display: none
+
+.main-text
+  visibility: hidden
+  margin-left: -5rem
+  // < 1200px
+  +lg
+    margin-left: 0
+  // < 576px
+  +sm
+    margin: 2rem 0
+    text-align: center
+  &__title
+    margin: 1rem 0 1.5rem
+    font-size: 4.1rem
+    line-height: 4.2rem
+    +sm
+      font-size: 3.2rem
+      line-height: 1
+  &__subtitle
+    font-size: 2.8rem
+    +sm
+      font-size: 2rem
+
+.form-wrap
+  margin-top: 2.4rem
+  padding: 2.5rem
+  background: rgba(white, .2)
+  &--transparent
+    background: transparent
+  &__text
+    margin: 0
+    font-size: 2rem
+    font-weight: 300
+    line-height: 2.5rem
+    &--important
+      font-weight: bold
+      line-height: 3.2rem
+      text-transform: uppercase
+  &__subtext
+    margin-left: 2rem
+    font-size: 1.4rem
+    font-weight: 300
+    line-height: 3rem
+    +sm
+      margin: 1rem 0 0
+
+.form
+  display: flex
+  margin: 1.2rem 0
+  +sm
+    padding: 0
+    flex-direction: column
+    button
+      width: fit-content
+      margin: 1rem auto 0
+    &__input
+      width: 100%
+  &--vertical
+    flex-direction: column
+    align-items: center
+    .form__input
+      max-width: 100%
+      width: 36.5rem
+    .form__btn
+      margin-top: 1rem
+  &__input
+    margin-right: 1rem
+    flex: 1
+    &.error
+      outline-color: rgba(#ff4141, .5)

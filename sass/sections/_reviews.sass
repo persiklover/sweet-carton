@@ -1,0 +1,44 @@
+.reviews
+  background-color: #f4f4f4
+  padding: 5rem 0
+  text-align: center
+  &-wrapper
+    padding: 0 3rem
+  &-slider
+    margin: 0 auto
+    +md
+      .reviews-slider__slide
+        margin: 0 11rem
+    +sm
+      max-width: 30rem
+      .reviews-slider__slide
+        margin: 0
+    &__slide
+      display: flex
+      margin: 0 3.5rem
+      background: white
+      width:  28rem
+      height: 38rem
+      outline: none
+      cursor: pointer
+      // < 1200px
+      +lg
+        margin: 0 .7rem
+      img
+        max-width: 100%
+        margin: auto
+    .slick-arrow
+      height: 100%
+      width: 4rem
+    .slick-prev:before,
+    .slick-next:before
+      content: ''
+      display: flex
+      width:  4rem
+      height: 4rem
+      border-top:  2px solid #ff9d00
+      border-left: 2px solid #ff9d00
+    .slick-prev:before
+      transform: rotate(-45deg)
+    .slick-next:before
+      transform: rotate(135deg)

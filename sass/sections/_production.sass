@@ -1,0 +1,86 @@
+.production
+  padding: 5rem 0
+  &-preview
+    margin-bottom: 1.5rem
+    cursor: pointer
+    &__item
+      width:  65.3rem
+      img
+        width: 100%
+        height: 46rem
+        object-fit: cover
+
+.slider
+  margin: 0 auto
+  &-wrapper
+    padding: 0 3rem
+    // < 768px
+    +sm
+      display: none
+  &__item
+    cursor: pointer
+    margin: 0 .2rem
+    img
+      height: 10rem
+      width:  14.1rem
+      object-fit: cover
+  .slick-arrow
+    width:  2.5rem
+    height: 100%
+    border: 1px solid #ff9d00
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: .3s ease
+    &:hover
+      background: #ff9d00
+  .slick-prev:before,
+  .slick-next:before
+    content: ''
+    position: relative
+    display: flex
+    width:  2rem
+    height: 2rem
+    border-top:  2px solid #ff9d00
+    border-left: 2px solid #ff9d00
+    transition: color .3s
+  .slick-prev:before
+    left:  .5rem
+    transform: rotate(-45deg)
+  .slick-next:before
+    right: .5rem
+    transform: rotate(135deg)
+  .slick-prev:hover:before,
+  .slick-next:hover:before
+    border-color: white
+  
+  .slick-prev
+    left:  -3rem
+  .slick-next
+    right: -3rem
+
+
+.production-text
+  &__title
+    font-size: 2.8rem
+    line-height: 1
+    color: white
+    width: 109%
+    background: #ff9d00
+    padding: 2rem
+    padding-left: 4rem
+    margin-bottom: 2.5rem
+    position: relative
+    z-index: -1
+    left: -4rem
+    // < 992px
+    +md
+      text-align: center
+      margin-top: 2rem
+      padding-left: 2rem
+      left: 0
+      width: 100%
+  p
+    font-size: 1.6rem
+    font-weight: 300
+    line-height: 2.4rem
