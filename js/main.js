@@ -2,7 +2,7 @@ $(function() {
 
 new WOW().init();
 
-$('.home-screen__bg').slick({
+$('.home-screen__bg-wrap').slick({
   autoplay: true,
   autoplaySpeed: 2000,
   arrows: false,
@@ -11,15 +11,6 @@ $('.home-screen__bg').slick({
 });
 
 $('.js-phone-input').mask('+7 (999) 999-99-99');
-
-$('.form').submit(function(e) {
-  var $input = $(this).children('input');
-  if ($input.val() == '') {
-    $input.addClass('error');
-    $input.focus();
-    e.preventDefault();
-  }
-});
 
 $('.js-btn-call').click(function() {
   $('.modal').addClass('active');
@@ -36,7 +27,7 @@ $('.modal-close').click(function() {
 });
 
 $('.modal').click(function(e) {
-  if ($(e.target).is($(this))) {
+  if ( $(e.target).is($(this)) ) {
     closeModal();
   }
 });
@@ -69,7 +60,6 @@ $('.production-preview').magnificPopup({
   gallery: {
     enabled: true,
     navigateByImgClick: true,
-    preload: [0,1] // Will preload 0 - before current, and 1 after the current image
   }
 });
 
@@ -98,8 +88,7 @@ $('.reviews-wrapper').magnificPopup({
   mainClass: 'mfp-img-mobile',
   gallery: {
     enabled: true,
-    navigateByImgClick: true,
-    preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+    navigateByImgClick: true
   }
 });
 

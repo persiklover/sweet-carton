@@ -1,19 +1,21 @@
 .contacts
   position: relative
-  display: flex
-  flex-direction: column
-  justify-content: center
   min-height: 55rem
   &-body
-    position: relative
+    position: absolute
     z-index: 1
+    top: 50%
+    transform: translateY(-50%)
     width: fit-content
     max-width: 40rem
     padding: 3rem 5rem
     background-color: #fff
     // < 768px
     +sm
-      margin: auto
+      left:  50%
+      right: 50%
+      width: 100%
+      transform: translate(-50%, -50%)
     +xs
       padding-left:  0
       padding-right: 0

@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="lib/magnific-popup/magnific-popup.css">
   <link rel="stylesheet" href="lib/animate/animate.css">
   <link rel="stylesheet" href="css/main.css">
+  <script src="lib/picturefill/picturefill.min.js"></script>
 </head>
 <body>
   <header class="header">
@@ -33,6 +34,7 @@
             </picture>
           </a>
         </div>
+        <!-- /.col-3 -->
 
         <div class="col-9">
           <div class="header-info">
@@ -46,6 +48,7 @@
             </button>
           </div>
         </div>
+        <!-- /.col-9 -->
 
       </div>
       <!-- /.row -->
@@ -55,16 +58,18 @@
 
   <main>
     <div class="home-screen">
-      <div class="home-screen__bg">
+
+      <div class="home-screen__bg-wrap wow fadeIn">
         <img src="img/main/main-bg1.jpg" alt="">
         <img src="img/main/main-bg2.jpg" alt="">
         <img src="img/main/main-bg3.jpg" alt="">
       </div>
+
       <div class="container">
         <div class="row justify-content-center align-items-center">
 
           <div class="col-lg-6">
-            <div class="home-screen__pic wow fadeInLeft">
+            <div class="home-screen__box wow fadeInLeft">
               <picture>
                 <source srcset="img/box.webp"
                         type="image/webp">
@@ -72,6 +77,7 @@
               </picture>
             </div>
           </div>
+          <!-- /.col-lg-6 -->
 
           <div class="col-sm-12 col-md-10 col-lg-6">
             <div class="main-text wow fadeInRight">
@@ -83,7 +89,7 @@
                 <p class="form-wrap__text form-wrap__text--important">Образцы упаковки бесплатно!</p>
 
                 <form class="form" method="POST">
-                  <input class="form__input js-phone-input" type="tel" placeholder="Введите номер телефона">
+                  <input class="form__input js-phone-input" type="tel" placeholder="Введите номер телефона" required>
                   <button class="btn form__btn js-send-btn" type="submit">Оставить заявку!</button>
                 </form>
 
@@ -91,6 +97,7 @@
               </div>
             </div>
           </div>
+          <!-- /.col-sm-12 col-md-10 col-lg-6 -->
 
         </div>
         <!-- /.row -->
@@ -252,7 +259,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="col-sm-12 col-md-6">
             <div class="product">
               <img class="product__img" src="img/products/1.jpg" alt="Листовой гофрокартон">
@@ -407,7 +414,7 @@
               <img class="client__logo" src="img/clients/logo-6.png" alt="">
             </div>
           </div>
-          
+
           <div class="col-6 col-md-6 col-lg-3">
             <div class="client wow fadeInDown">
               <img class="client__logo" src="img/clients/logo-7.png" alt="">
@@ -422,7 +429,7 @@
 
         </div>
         <div class="row">
-          
+
           <div class="col-6 col-md-6 col-lg-3">
             <div class="client wow fadeInDown">
               <img class="client__logo" src="img/clients/logo-9.png" alt="">
@@ -489,7 +496,7 @@
                 <h4 class="contacts-block__title">Адрес офиса</h4>
                 <address>г. Уфа, Проспект октября, 46</address>
               </div>
-              
+
               <div class="contacts-block__row">
                 <h4 class="contacts-block__title">Адрес склада</h4>
                 <address>г. Уфа, ул. Майкопская, 65/2</address>
@@ -504,7 +511,7 @@
                 <h4 class="contacts-block__title">Тел. отдела продаж:</h4>
                 <a href="tel:83472715428">8 (347) 271-54-28</a>
                 <a href="tel:89373633000">8 (937) 363-30-00</a>
-                <button class="btn contacts-block__btn">Заказать звонок</button>
+                <button class="btn js-btn-call contacts-block__btn">Заказать звонок</button>
               </div>
             </div>
           </section>

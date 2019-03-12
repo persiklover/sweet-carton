@@ -4,6 +4,8 @@
   text-align: center
   &-wrapper
     padding: 0 3rem
+    +xs
+      padding: 0 1rem
   &-slider
     margin: 0 auto
     +md
@@ -28,6 +30,7 @@
         max-width: 100%
         margin: auto
     .slick-arrow
+      z-index: 1
       height: 100%
       width: 4rem
     .slick-prev:before,
@@ -42,3 +45,9 @@
       transform: rotate(-45deg)
     .slick-next:before
       transform: rotate(135deg)
+    .slick-next
+      +xs
+        right: -1rem
+    .slick-prev
+      +xs
+        left: -1rem

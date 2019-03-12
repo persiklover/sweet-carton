@@ -4,13 +4,41 @@
     margin-bottom: 1.5rem
     cursor: pointer
     &__item
-      width:  65.3rem
+      max-width: 65.3rem
+      +lg
+        max-width: 100%
       img
         width: 100%
-        height: 46rem
+        height: 36rem
         object-fit: cover
         +xs
           height: 26rem
+  &-text
+    &__title
+      font-size: 2.8rem
+      line-height: 1
+      color: white
+      width: 111%
+      background: #ff9d00
+      padding: 2rem
+      padding-left: 4rem
+      margin-bottom: 2.5rem
+      position: relative
+      z-index: -1
+      left: -4rem
+      // < 992px
+      +md
+        text-align: center
+        margin-top: 2rem
+        padding-left: 2rem
+        left: 0
+        width: 100%
+    p
+      font-size: 1.6rem
+      font-weight: 300
+      line-height: 2.4rem
+      +xs
+        text-align: center
 
 .slider
   margin: 0 auto
@@ -55,36 +83,8 @@
   .slick-prev:hover:before,
   .slick-next:hover:before
     border-color: white
-  
+
   .slick-prev
     left:  -3rem
   .slick-next
     right: -3rem
-
-
-.production-text
-  &__title
-    font-size: 2.8rem
-    line-height: 1
-    color: white
-    width: 109%
-    background: #ff9d00
-    padding: 2rem
-    padding-left: 4rem
-    margin-bottom: 2.5rem
-    position: relative
-    z-index: -1
-    left: -4rem
-    // < 992px
-    +md
-      text-align: center
-      margin-top: 2rem
-      padding-left: 2rem
-      left: 0
-      width: 100%
-  p
-    font-size: 1.6rem
-    font-weight: 300
-    line-height: 2.4rem
-    +xs
-      text-align: center
